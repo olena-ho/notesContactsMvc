@@ -1,0 +1,12 @@
+﻿@model NotesContacts.Web.Models.Note
+@{
+    ViewData["Title"] = "Note Details";
+}
+<h1>@Model.Title</h1>
+<p><strong>Created:</strong> @Model.CreatedAt.LocalDateTime</p>
+<p><strong>Tags:</strong> @(Model.Tags is { Length: > 0 } ? string.Join(", ", Model.Tags) : "-")</p>
+<pre>@Model.Text</pre>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</p>

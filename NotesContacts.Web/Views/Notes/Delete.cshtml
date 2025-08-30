@@ -1,0 +1,13 @@
+﻿@model NotesContacts.Web.Models.Note
+@{
+    ViewData["Title"] = "Delete Note";
+}
+<h1>Delete Note</h1>
+<div class="alert alert-warning">
+    Are you sure you want to delete "<strong>@Model.Title</strong>"?
+</div>
+<form asp-action="Delete" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button class="btn btn-danger" type="submit">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

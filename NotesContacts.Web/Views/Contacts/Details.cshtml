@@ -1,0 +1,19 @@
+﻿@model NotesContacts.Web.Models.Contact
+@{
+    ViewData["Title"] = "Contact Details";
+}
+<h1>@Model.Name</h1>
+<dl class="row">
+    <dt class="col-sm-3">Mobile</dt>
+    <dd class="col-sm-9">@Model.Mobile</dd>
+    <dt class="col-sm-3">Alt Mobile</dt>
+    <dd class="col-sm-9">@Model.AltPhone</dd>
+    <dt class="col-sm-3">Email</dt>
+    <dd class="col-sm-9">@Model.Email</dd>
+    <dt class="col-sm-3">Description</dt>
+    <dd class="col-sm-9">@Model.Description</dd>
+</dl>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</p>

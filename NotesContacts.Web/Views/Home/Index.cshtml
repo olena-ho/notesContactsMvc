@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Notes</h5>
+                <p class="card-text">Create, view, edit and delete your notes. Filter by tags later.</p>
+                <a class="btn btn-primary" asp-controller="Notes" asp-action="Index">Open Notes</a>
+                <a class="btn btn-outline-secondary" asp-controller="Notes" asp-action="Create">New Note</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Contacts</h5>
+                <p class="card-text">Manage your contacts with phones and emails.</p>
+                <a class="btn btn-primary" asp-controller="Contacts" asp-action="Index">Open Contacts</a>
+                <a class="btn btn-outline-secondary" asp-controller="Contacts" asp-action="Create">New Contact</a>
+            </div>
+        </div>
+    </div>
+</div>
+

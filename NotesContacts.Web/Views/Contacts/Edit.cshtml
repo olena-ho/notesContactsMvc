@@ -1,0 +1,14 @@
+﻿@model NotesContacts.Web.Models.Contact
+@{
+    ViewData["Title"] = "Edit Contact";
+}
+<h1>Edit Contact</h1>
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <partial name="_Form" />
+    <button class="btn btn-primary" type="submit">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
